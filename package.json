@@ -5,7 +5,9 @@
   "main": "app/index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
-    "start": "node ./app/index.js"
+    "start": "node ./app/index.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -26,7 +28,9 @@
   "dependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
-    "natural": "^0.4.0"
+    "natural": "^0.4.0",
+    "snyk": "^1.192.4"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "snyk": true
 }
